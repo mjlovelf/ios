@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RunLoopStudyViewController">
+            <connections>
+                <outlet property="tableView" destination="kro-Vz-Lmj" id="CZc-QI-Ucb"/>
+                <outlet property="titleLabel" destination="Y88-3K-Kqo" id="x3f-8V-oOa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y88-3K-Kqo">
+                    <rect key="frame" x="182.5" y="100" width="10.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.99902999161073824" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kro-Vz-Lmj">
+                    <rect key="frame" x="0.0" y="141" width="375" height="519"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="RSf-aS-dKH"/>
+                        <outlet property="delegate" destination="-1" id="jQB-Tr-f0z"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kro-Vz-Lmj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2E1-Zd-k4Q"/>
+                <constraint firstItem="Y88-3K-Kqo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="TW9-vP-o6R"/>
+                <constraint firstItem="Y88-3K-Kqo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZRA-Ct-nJE"/>
+                <constraint firstItem="kro-Vz-Lmj" firstAttribute="top" secondItem="Y88-3K-Kqo" secondAttribute="bottom" constant="20" id="efG-SR-KSo"/>
+                <constraint firstAttribute="bottom" secondItem="kro-Vz-Lmj" secondAttribute="bottom" constant="7" id="hpc-VG-BHM"/>
+                <constraint firstAttribute="trailing" secondItem="kro-Vz-Lmj" secondAttribute="trailing" id="iLj-0s-ifq"/>
+            </constraints>
+            <point key="canvasLocation" x="26.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

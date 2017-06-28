@@ -1,0 +1,18 @@
+
+//
+//  DesignModelTest-Prefix.pch
+//  DesignModelTest
+//
+//  Created by mjbest on 17/6/12.
+//  Copyright © 2017年 majian. All rights reserved.
+//
+
+#ifndef DesignDemo_Prefix_pch
+#define DesignDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Masonry.h"
+#import "Utils.h"
+#import "Global.h"
+#endif /* DesignModelTest_Prefix_pch */
