@@ -19,7 +19,16 @@ dispatch_once(&onceToken, ^{
     SEL currentSelector  = @selector(godIsGoodMan);
     Method parentMethod  = class_getInstanceMethod(self, parentSelector);
     Method currentMethod = class_getInstanceMethod(self, currentSelector);
+  //  主类本身没有实现需要替换的方法，而是继承了父类的实现，即 class_addMethod 方法返回 YES 。这时使用 class_getInstanceMethod 函数获取到的 parentSelector 指向的就是父类的方法，我们再通过执行 class_replaceMethod(class, currentSelector, method_getImplementation(parentMethod), method_getTypeEncoding(parentMethod));
+   // 将父类的实现替换到我们自定义的 godIsGoodMan 方法中。这样就达到了在 godIsGoodMan 方法的实现中调用父类实现的目的
+    // class_addMethod 和 class_replaceMethod 的逻辑一定要加。因为就是要防止 Swizzling 掉父类的方法。如果父类方法被 Swizzling 掉的话，其他继承这个类没实现这个方法，且调用了的话，会 unrecognized selector，因为它会调 那个 swizzling 的方法。
+    BOOL success = class_addMethod(self, parentSelector, method_getImplementation(currentMethod), method_getTypeEncoding(currentMethod));
+    if (success) {
+        class_replaceMethod(self, currentSelector, method_getImplementation(parentMethod), method_getTypeEncoding(parentMethod));
+    }else{
+        method_exchangeImplementations(parentMethod, currentMethod);
 
+    }
 
 });
 

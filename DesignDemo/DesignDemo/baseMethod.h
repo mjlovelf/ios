@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "middleMethod.h"
 
-@interface baseMethod : JSONModel
+@interface baseMethod : middleMethod
 
 //应用名
 @property(nonatomic, copy)NSString *appname;
@@ -17,6 +18,5 @@
 //是否隐藏
 @property(nonatomic, assign)BOOL hide;
 
-- (void)writeSome;
 
 @end

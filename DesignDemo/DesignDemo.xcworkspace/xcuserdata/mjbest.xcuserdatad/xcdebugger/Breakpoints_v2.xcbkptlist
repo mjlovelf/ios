@@ -257,5 +257,68 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DesignDemo/baseMethod+swizzlingMethod.m"
+            timestampString = "520500985.401611"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "+load"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35+[baseMethod(swizzlingMethod) load]_block_invoke"
+                  moduleName = "DesignDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/baseMethod+swizzlingMethod.m"
+                  timestampString = "520499668.442304"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_"
+                  moduleName = "DesignDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/baseMethod+swizzlingMethod.m"
+                  timestampString = "520499668.444288"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "DesignDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/baseMethod+swizzlingMethod.m"
+                  timestampString = "520499668.445908"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "8">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

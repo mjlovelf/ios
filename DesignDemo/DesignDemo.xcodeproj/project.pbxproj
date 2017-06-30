@@ -39,6 +39,7 @@
 		2C35361C1F04FD9700110B45 /* RuntimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35361A1F04FD9700110B45 /* RuntimeViewController.xib */; };
 		2C3536201F04FE6000110B45 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35361E1F04FE6000110B45 /* MainViewController.m */; };
 		2C3536211F04FE6000110B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35361F1F04FE6000110B45 /* MainViewController.xib */; };
+		2C3536241F06328700110B45 /* middleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3536231F06328700110B45 /* middleMethod.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		2C35361D1F04FE6000110B45 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		2C35361E1F04FE6000110B45 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		2C35361F1F04FE6000110B45 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		2C3536221F06328700110B45 /* middleMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = middleMethod.h; sourceTree = "<group>"; };
+		2C3536231F06328700110B45 /* middleMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = middleMethod.m; sourceTree = "<group>"; };
 		2EFDD9C69ECA12D23FE81523 /* Pods-DesignDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.release.xcconfig"; sourceTree = "<group>"; };
 		49528D6841858C368CF4955C /* libPods-DesignDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390B7883CBB32EDF3BA354B /* Pods-DesignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				2C3536181F04FD9700110B45 /* RuntimeViewController.h */,
 				2C3536191F04FD9700110B45 /* RuntimeViewController.m */,
 				2C35361A1F04FD9700110B45 /* RuntimeViewController.xib */,
+				2C3536221F06328700110B45 /* middleMethod.h */,
+				2C3536231F06328700110B45 /* middleMethod.m */,
 			);
 			name = runtime;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				2C3536141F04FCB200110B45 /* baseMethod.m in Sources */,
 				2C3536201F04FE6000110B45 /* MainViewController.m in Sources */,
 				2C28B5511EEFE4230083EDE0 /* UserInfo.m in Sources */,
+				2C3536241F06328700110B45 /* middleMethod.m in Sources */,
 				2C28B5481EEFC0930083EDE0 /* DataHelper.m in Sources */,
 				2C28B54E1EEFE1A40083EDE0 /* baseModel.m in Sources */,
 				2C0FFD491F00D93F00644A69 /* PerfromMethodViewController.m in Sources */,

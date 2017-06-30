@@ -53,9 +53,10 @@
     return self;
 }
 
-- (void)writeSome{
 
-    NSLog(@"执行了writeSome");
+- (void)writeBaseSome{
+
+    NSLog(@"执行了.......");
 }
 
 @end
