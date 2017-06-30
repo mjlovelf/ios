@@ -15,4 +15,6 @@
 -(void)logAllProperite;
 
 -(void)logPublicProperite;
+
+-(void)printAllMethod:(Class) idcontent;
 @end

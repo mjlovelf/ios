@@ -31,7 +31,6 @@ dispatch_once(&onceToken, ^{
         method_exchangeImplementations(parentMethod, currentMethod);
 
     }
-
 });
 
 }
@@ -64,4 +63,16 @@ dispatch_once(&onceToken, ^{
 
    return  objc_getAssociatedObject([middleMethod class], ignoreActionKey);
 }
+
+-(void)printAllMethod:(Class) idcontent{
+    unsigned int count = 0;
+    Method *method = class_copyMethodList(idcontent, &count);
+    for (int i = 0; i<count; i++) {
+        NSLog(@"打印使用的方法=%@",[NSString stringWithUTF8String:sel_getName(method_getName(method[i]))]);
+
+    }
+//存疑，私有方法最后怎么吊起
+
+}
+
 @end

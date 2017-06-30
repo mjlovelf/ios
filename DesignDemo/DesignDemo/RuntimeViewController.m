@@ -26,7 +26,8 @@
 }
 - (IBAction)buttonClick:(id)sender {
     baseMethod *method = [[baseMethod alloc] init];
-    [method writeSome];
+  //  [method writeSome];
+    [method printAllMethod:[_button class]];
 }
 - (IBAction)varListClick:(id)sender {
 
@@ -35,9 +36,11 @@
     [method logPublicProperite];
     method.categaryProperite = @"ddsds";
     NSLog(@"当前 ＝%@",method.categaryProperite);
+
 }
 
-/*
+
+/*void
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
