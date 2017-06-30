@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "RunLoopViewController.h"
+#import "MainViewController.h"
 
-@interface AppDelegate ()<ViewControllerDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -20,18 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 
-//    ViewController *viewcontroller = [[ViewController alloc]init];
-//    viewcontroller.delegate = self;
-    RunLoopViewController *viewcontroller = [[RunLoopViewController alloc]initWithNibName:@"RunLoopViewController" bundle:nil];
+    MainViewController *viewcontroller = [[MainViewController alloc]initWithNibName:@"MainViewController" bundle:nil];
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:viewcontroller];
     self.window.rootViewController = navigationController;
     // Override point for customization after application launch.
     return YES;
 }
--(void)testClick{
 
-    [[NSNotificationCenter defaultCenter]postNotificationName:NOTICCE_MESSAGE object:nil];
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
