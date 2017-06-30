@@ -8,6 +8,8 @@
 
 #import "baseMethod+swizzlingMethod.h"
 #import <objc/runtime.h>
+static const char *ignoreActionKey = "ignoreActionKey";
+
 @implementation baseMethod (swizzlingMethod)
 
 + (void)load{
@@ -36,5 +38,30 @@ dispatch_once(&onceToken, ^{
 - (void)godIsGoodMan{
 
     NSLog(@"godisgood");
+}
+
+-(void)logAllProperite{
+    unsigned int count = 0;
+    Ivar *ivars = class_copyIvarList([baseMethod class], &count);
+    for (int i = 0; i<count; i++) {
+        NSLog(@"所有属性有＝%@",[NSString stringWithUTF8String:ivar_getName(ivars[i])]);
+    }
+}
+
+-(void)logPublicProperite{
+
+    unsigned int count = 0;
+      objc_property_t *ivars = class_copyPropertyList([baseMethod class], &count);
+    for (int i = 0; i<count; i++) {
+        NSLog(@"公共属性有＝%@",[NSString stringWithUTF8String:property_getName(ivars[i])]);
+    }
+}
+//通过设置getset方法，可在categary中添加属性
+- (void)setCategaryProperite:(NSString *)categaryProperite{
+    objc_setAssociatedObject([middleMethod class], ignoreActionKey, categaryProperite, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+- (NSString *)categaryProperite{
+
+   return  objc_getAssociatedObject([middleMethod class], ignoreActionKey);
 }
 @end

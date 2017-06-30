@@ -28,6 +28,14 @@
     baseMethod *method = [[baseMethod alloc] init];
     [method writeSome];
 }
+- (IBAction)varListClick:(id)sender {
+
+    baseMethod *method = [[baseMethod alloc] init];
+    [method logAllProperite];
+    [method logPublicProperite];
+    method.categaryProperite = @"ddsds";
+    NSLog(@"当前 ＝%@",method.categaryProperite);
+}
 
 /*
 #pragma mark - Navigation

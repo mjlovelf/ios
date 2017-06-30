@@ -21,18 +21,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j9K-uX-jDk">
-                    <rect key="frame" x="157" y="318.5" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="15" y="318.5" width="345" height="30"/>
+                    <state key="normal" title="置换方法"/>
                     <connections>
                         <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="gGQ-kt-2x5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbb-Tv-97d">
+                    <rect key="frame" x="15" y="377" width="345" height="30"/>
+                    <state key="normal" title="获取类属性"/>
+                    <connections>
+                        <action selector="varListClick:" destination="-1" eventType="touchUpInside" id="Jkx-yj-jK4"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="dbb-Tv-97d" firstAttribute="top" secondItem="j9K-uX-jDk" secondAttribute="bottom" constant="28.5" id="20p-3Q-AKu"/>
                 <constraint firstItem="j9K-uX-jDk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="7f9-Ks-sdc"/>
-                <constraint firstAttribute="trailing" secondItem="j9K-uX-jDk" secondAttribute="trailing" constant="172" id="VN4-7H-SLx"/>
-                <constraint firstItem="j9K-uX-jDk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="157" id="tPp-ub-77p"/>
+                <constraint firstItem="dbb-Tv-97d" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Lln-Cy-num"/>
+                <constraint firstAttribute="trailing" secondItem="j9K-uX-jDk" secondAttribute="trailing" constant="15" id="VN4-7H-SLx"/>
+                <constraint firstAttribute="trailing" secondItem="dbb-Tv-97d" secondAttribute="trailing" constant="15" id="gtM-nn-NwH"/>
+                <constraint firstItem="j9K-uX-jDk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="tPp-ub-77p"/>
             </constraints>
         </view>
     </objects>

@@ -10,4 +10,9 @@
 
 @interface baseMethod (swizzlingMethod)
 
+@property(nonatomic, copy)NSString *categaryProperite;
+
+-(void)logAllProperite;
+
+-(void)logPublicProperite;
 @end
