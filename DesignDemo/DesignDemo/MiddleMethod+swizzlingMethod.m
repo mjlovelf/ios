@@ -76,19 +76,29 @@ dispatch_once(&onceToken, ^{
     //调用类实例化方法
     NSString *returnValue = ((NSString *(*)(id, SEL, NSString *)) objc_msgSend)((id) idtest, NSSelectorFromString(@"privateMethod:"), @"参数1");
     NSLog(@"打印结果=%@",returnValue);
+    free(method);
 }
 
 -(void)printAllStaticMethod:(Class)idcontent idtest:(id)idtest{
     unsigned int count = 0;
-    Method *method = class_copyMethodList([idtest  superclass], &count);
+    //加入object_getClass就只会获取到静态方法，原因是静态的为类方法，需要到metaclass中去获取
+    Method *method = class_copyMethodList(object_getClass(idcontent), &count);
     //打印发现，静态的私有方法是无法获取出来的
     for (int i = 0; i<count; i++) {
         NSLog(@"打印使用的方法=%@",[NSString stringWithUTF8String:sel_getName(method_getName(method[i]))]);
 
     }
     //调用类静态方法
-    NSString *returnValue = ((NSString *(*)(id, SEL, NSString *)) objc_msgSend)((id) idcontent, NSSelectorFromString(@"privateStaticMethod:"), @"参数1");
+    NSString *returnValue = ((NSString *(*)(id, SEL)) objc_msgSend)((id)self , NSSelectorFromString(@"test"));
     NSLog(@"打印结果=%@",returnValue);
+    free(method);
 
 }
+
+-(NSString *)test{
+    NSString *returnValue = ((NSString *(*)(id, SEL, NSString *)) objc_msgSend)((id) [rootMethod class] , NSSelectorFromString(@"privateStaticMethod:"), @"参数1");
+    NSLog(@"test打印结果=%@",returnValue);
+    return returnValue;
+}
+//总结：objc_msgSend调用静态方法，id需要传class，调用实例化方法需要传递类的实例
 @end
