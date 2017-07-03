@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "middleMethod.h"
+#import "rootMethod.h"
 
-@interface baseMethod : middleMethod
+@interface MiddleMethod : rootMethod
 
 //应用名
 @property(nonatomic, copy)NSString *appname;

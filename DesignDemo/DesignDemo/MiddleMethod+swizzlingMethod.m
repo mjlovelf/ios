@@ -6,11 +6,12 @@
 //  Copyright © 2017年 majian. All rights reserved.
 //
 
-#import "baseMethod+swizzlingMethod.h"
+#import "MiddleMethod+swizzlingMethod.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
 static const char *ignoreActionKey = "ignoreActionKey";
 
-@implementation baseMethod (swizzlingMethod)
+@implementation MiddleMethod (swizzlingMethod)
 
 + (void)load{
 
@@ -41,7 +42,7 @@ dispatch_once(&onceToken, ^{
 
 -(void)logAllProperite{
     unsigned int count = 0;
-    Ivar *ivars = class_copyIvarList([baseMethod class], &count);
+    Ivar *ivars = class_copyIvarList([MiddleMethod class], &count);
     for (int i = 0; i<count; i++) {
         NSLog(@"所有属性有＝%@",[NSString stringWithUTF8String:ivar_getName(ivars[i])]);
     }
@@ -50,29 +51,44 @@ dispatch_once(&onceToken, ^{
 -(void)logPublicProperite{
 
     unsigned int count = 0;
-      objc_property_t *ivars = class_copyPropertyList([baseMethod class], &count);
+      objc_property_t *ivars = class_copyPropertyList([MiddleMethod class], &count);
     for (int i = 0; i<count; i++) {
         NSLog(@"公共属性有＝%@",[NSString stringWithUTF8String:property_getName(ivars[i])]);
     }
 }
 //通过设置getset方法，可在categary中添加属性
 - (void)setCategaryProperite:(NSString *)categaryProperite{
-    objc_setAssociatedObject([middleMethod class], ignoreActionKey, categaryProperite, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject([rootMethod class], ignoreActionKey, categaryProperite, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (NSString *)categaryProperite{
 
-   return  objc_getAssociatedObject([middleMethod class], ignoreActionKey);
+   return  objc_getAssociatedObject([rootMethod class], ignoreActionKey);
 }
-
--(void)printAllMethod:(Class) idcontent{
+//此方法只能打印当前class的类，不能打印父类的
+-(void)printAllMethod:(Class) idcontent idtest:(id)idtest{
     unsigned int count = 0;
     Method *method = class_copyMethodList(idcontent, &count);
+    //实例 化后的方法是可以获取出来的
     for (int i = 0; i<count; i++) {
         NSLog(@"打印使用的方法=%@",[NSString stringWithUTF8String:sel_getName(method_getName(method[i]))]);
 
     }
-//存疑，私有方法最后怎么吊起
-
+    //调用类实例化方法
+    NSString *returnValue = ((NSString *(*)(id, SEL, NSString *)) objc_msgSend)((id) idtest, NSSelectorFromString(@"privateMethod:"), @"参数1");
+    NSLog(@"打印结果=%@",returnValue);
 }
 
+-(void)printAllStaticMethod:(Class)idcontent idtest:(id)idtest{
+    unsigned int count = 0;
+    Method *method = class_copyMethodList([idtest  superclass], &count);
+    //打印发现，静态的私有方法是无法获取出来的
+    for (int i = 0; i<count; i++) {
+        NSLog(@"打印使用的方法=%@",[NSString stringWithUTF8String:sel_getName(method_getName(method[i]))]);
+
+    }
+    //调用类静态方法
+    NSString *returnValue = ((NSString *(*)(id, SEL, NSString *)) objc_msgSend)((id) idcontent, NSSelectorFromString(@"privateStaticMethod:"), @"参数1");
+    NSLog(@"打印结果=%@",returnValue);
+
+}
 @end

@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface middleMethod : NSObject
+@interface rootMethod : NSObject
 
 - (void)writeSome;
-
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 majian. All rights reserved.
 //
 
-#import "baseMethod.h"
+#import "MiddleMethod.h"
 
-@interface baseMethod (swizzlingMethod)
+@interface MiddleMethod (swizzlingMethod)
 
 @property(nonatomic, copy)NSString *categaryProperite;
 
@@ -16,5 +16,7 @@
 
 -(void)logPublicProperite;
 
--(void)printAllMethod:(Class) idcontent;
+-(void)printAllMethod:(Class) idcontent idtest:(id)idtest;
+
+-(void)printAllStaticMethod:(Class)idcontent idtest:(id)idtest;
 @end

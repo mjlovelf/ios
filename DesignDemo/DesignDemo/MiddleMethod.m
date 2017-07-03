@@ -6,9 +6,9 @@
 //  Copyright © 2017年 majian. All rights reserved.
 //
 
-#import "baseMethod.h"
+#import "MiddleMethod.h"
 #import <objc/runtime.h>
-@implementation baseMethod
+@implementation MiddleMethod
 
 +(BOOL)propertyIsOptional:(NSString*)propertyName
 {

@@ -7,7 +7,7 @@
 //
 
 #import "RuntimeViewController.h"
-#import "baseMethod+swizzlingMethod.h"
+#import "MiddleMethod+swizzlingMethod.h"
 @interface RuntimeViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button;
 
@@ -25,20 +25,29 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)buttonClick:(id)sender {
-    baseMethod *method = [[baseMethod alloc] init];
-  //  [method writeSome];
-    [method printAllMethod:[_button class]];
-}
+    MiddleMethod *method = [[MiddleMethod alloc] init];
+    [method writeSome];
+    }
 - (IBAction)varListClick:(id)sender {
 
-    baseMethod *method = [[baseMethod alloc] init];
+    MiddleMethod *method = [[MiddleMethod alloc] init];
     [method logAllProperite];
     [method logPublicProperite];
     method.categaryProperite = @"ddsds";
     NSLog(@"当前 ＝%@",method.categaryProperite);
 
 }
+- (IBAction)privateMethodClick:(id)sender {
 
+    MiddleMethod *method = [[MiddleMethod alloc] init];
+    [method printAllMethod:[MiddleMethod superclass] idtest:method];
+}
+
+- (IBAction)privateStaticMethodClick:(id)sender {
+    MiddleMethod *method = [[MiddleMethod alloc] init];
+    [method printAllStaticMethod:[MiddleMethod superclass] idtest:method ];
+
+}
 
 /*void
 #pragma mark - Navigation
