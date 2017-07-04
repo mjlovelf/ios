@@ -7,7 +7,7 @@
 #import "AFNetworking.h"
 #import "JSONModel.h"
 #import "SDiPhoneVersion.h"
-
+#import "Global.h"
 
 #define IS_IPHONE4  ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )480 ) < DBL_EPSILON )
 #define IS_IPHONE5  ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
@@ -518,5 +518,14 @@ static NSInteger PWD_MIN_INPUT_LENGTH = 7;
 
 //获取当前系统版本，前面带有V
 + (NSString *)getCurrentAppVersionWithV;
-
+/**
+ *  获取定制的button
+ *
+ *  @param aType btn类型
+ *  @param title title
+ *  @param img   image
+ *
+ *  @return 定制化的button
+ */
++ (UIButton*)createButtonWith:(CustomButtonType)aType text:(NSString *)title img:(UIImage *)img;
 @end

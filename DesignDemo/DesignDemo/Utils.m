@@ -1063,5 +1063,43 @@ static NSDictionary *kSeperationSpaceDict;
 
     return  result;
 }
-
+/**
+ *  获取定制的button
+ *
+ *  @param aType btn类型
+ *  @param title title
+ *  @param img   image
+ *
+ *  @return 定制化的button
+ */
++ (UIButton*)createButtonWith:(CustomButtonType)aType text:(NSString *)title img:(UIImage *)img{
+    UIButton *aBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    if (aType == CustomButtonType_Back) {
+        UIImage *img = [UIImage imageNamed:@"topbar_icon_back"];
+        aBtn.frame = CGRectMake(0, 0, 30, 30);
+        aBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+        [aBtn setImage:img forState:UIControlStateNormal];
+        //aBtn.backgroundColor = [UIColor redColor];
+    }
+    else if(aType == CustomButtonType_Text){
+        [aBtn setTitle:title forState:UIControlStateNormal];
+        [aBtn.titleLabel setFont:[UIFont boldSystemFontOfSize:14.]];
+        [aBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        CGFloat width =[Utils widthOfText:title theHeight:30 theFont:aBtn.titleLabel.font];
+        if (width<50) {
+            width= 50;
+        }
+        aBtn.frame = CGRectMake(0, 0, width, 30);
+        [aBtn setBackgroundColor:[UIColor clearColor]];
+        //[Utils cornerView:aBtn withRadius:4 borderWidth:1 borderColor:[UIColor whiteColor]];
+    }
+    else if (aType == CustomButtonType_Img){
+        CGSize imgSize = img.size;
+        [aBtn setImage:img forState:UIControlStateNormal];
+        aBtn.frame = CGRectMake(0, 0, imgSize.width, imgSize.height);
+        aBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
+        [aBtn setBackgroundColor:[UIColor clearColor]];
+    }
+    return aBtn;
+}
 @end

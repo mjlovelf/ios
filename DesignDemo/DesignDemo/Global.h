@@ -14,4 +14,14 @@
  */
 #define WEAK_SELF_OBJ(obj)   __weak __typeof(obj) weakSelf = obj;
 #define STRONG_SELF_OBJ(obj)  __strong __typeof(obj) strongSelf = obj; if (!strongSelf) {DLog(@">>>>> strongSelf = nil >>>>>");return ;}
+
+/**
+ *  自定义button类型
+ */
+typedef NS_ENUM(NSInteger, CustomButtonType){
+    CustomButtonType_Back,//返回
+    CustomButtonType_Text,//文字
+    CustomButtonType_Img,//图片
+};
+
 #endif /* Global_h */

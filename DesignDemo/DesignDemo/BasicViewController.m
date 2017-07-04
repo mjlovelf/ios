@@ -16,12 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if( [self.navigationController.childViewControllers count] > 1 )
+    {
+        UIButton *leftBtn = [Utils createButtonWith:CustomButtonType_Back text:nil img:nil];
+        leftBtn.selected  = NO;
+        [leftBtn addTarget:self action:@selector(clickBack:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+        self.navigationItem.leftBarButtonItem = leftItem;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)clickBack:(id)sender {
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 /*
