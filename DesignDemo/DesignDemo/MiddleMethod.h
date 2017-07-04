@@ -18,5 +18,5 @@
 //是否隐藏
 @property(nonatomic, assign)BOOL hide;
 
-
++(void)startTest;
 @end

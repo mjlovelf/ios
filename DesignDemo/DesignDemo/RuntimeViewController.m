@@ -46,7 +46,7 @@
 - (IBAction)privateStaticMethodClick:(id)sender {
     MiddleMethod *method = [[MiddleMethod alloc] init];
     [method printAllStaticMethod:[MiddleMethod superclass] idtest:method ];
-
+    [MiddleMethod startTest];
 }
 
 /*void

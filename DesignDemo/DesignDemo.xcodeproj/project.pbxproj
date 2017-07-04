@@ -41,6 +41,8 @@
 		2C3536211F04FE6000110B45 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35361F1F04FE6000110B45 /* MainViewController.xib */; };
 		2C3536241F06328700110B45 /* rootMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3536231F06328700110B45 /* rootMethod.m */; };
 		2C3536261F0A2E7700110B45 /* runtime.md in Sources */ = {isa = PBXBuildFile; fileRef = 2C3536251F0A2E7700110B45 /* runtime.md */; };
+		2C35362B1F0B314C00110B45 /* ObserverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3536291F0B314C00110B45 /* ObserverViewController.m */; };
+		2C35362C1F0B314C00110B45 /* ObserverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35362A1F0B314C00110B45 /* ObserverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,9 @@
 		2C3536221F06328700110B45 /* rootMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootMethod.h; sourceTree = "<group>"; };
 		2C3536231F06328700110B45 /* rootMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootMethod.m; sourceTree = "<group>"; };
 		2C3536251F0A2E7700110B45 /* runtime.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = runtime.md; sourceTree = "<group>"; };
+		2C3536281F0B314C00110B45 /* ObserverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverViewController.h; sourceTree = "<group>"; };
+		2C3536291F0B314C00110B45 /* ObserverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverViewController.m; sourceTree = "<group>"; };
+		2C35362A1F0B314C00110B45 /* ObserverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObserverViewController.xib; sourceTree = "<group>"; };
 		2EFDD9C69ECA12D23FE81523 /* Pods-DesignDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.release.xcconfig"; sourceTree = "<group>"; };
 		49528D6841858C368CF4955C /* libPods-DesignDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390B7883CBB32EDF3BA354B /* Pods-DesignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +176,7 @@
 		2C0FFD351F00A00E00644A69 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C3536271F0B312100110B45 /* observer */,
 				2C3536111F04FB6000110B45 /* runloop */,
 				2C3536101F04FB5500110B45 /* runtime */,
 				2C3535FB1F023E7500110B45 /* message */,
@@ -317,6 +323,16 @@
 			name = runloop;
 			sourceTree = "<group>";
 		};
+		2C3536271F0B312100110B45 /* observer */ = {
+			isa = PBXGroup;
+			children = (
+				2C3536281F0B314C00110B45 /* ObserverViewController.h */,
+				2C3536291F0B314C00110B45 /* ObserverViewController.m */,
+				2C35362A1F0B314C00110B45 /* ObserverViewController.xib */,
+			);
+			name = observer;
+			sourceTree = "<group>";
+		};
 		9D1A68FB78B007C48AB22FEE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +470,7 @@
 			files = (
 				2C28B51D1EEFB3D70083EDE0 /* LaunchScreen.storyboard in Resources */,
 				2C0FFD3B1F00A04B00644A69 /* RunLoopViewController.xib in Resources */,
+				2C35362C1F0B314C00110B45 /* ObserverViewController.xib in Resources */,
 				2C28B51A1EEFB3D70083EDE0 /* Assets.xcassets in Resources */,
 				2C0FFD4A1F00D93F00644A69 /* PerfromMethodViewController.xib in Resources */,
 				2C3536211F04FE6000110B45 /* MainViewController.xib in Resources */,
@@ -535,6 +552,7 @@
 			files = (
 				2C3536171F04FD5200110B45 /* MiddleMethod+swizzlingMethod.m in Sources */,
 				2C3535FE1F023F8B00110B45 /* MyWorkerClass.m in Sources */,
+				2C35362B1F0B314C00110B45 /* ObserverViewController.m in Sources */,
 				2C3536141F04FCB200110B45 /* MiddleMethod.m in Sources */,
 				2C3536201F04FE6000110B45 /* MainViewController.m in Sources */,
 				2C28B5511EEFE4230083EDE0 /* UserInfo.m in Sources */,

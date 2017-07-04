@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "RunLoopViewController.h"
 #import "RuntimeViewController.h"
+#import "ObserverViewController.h"
 
 static NSString *cellIdentifier = @"mainCell";
 
@@ -29,7 +30,7 @@ static NSString *cellIdentifier = @"mainCell";
     [Utils setNavBarBgUI:self.navigationController.navigationBar];
     self.title = @"study";
     [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-    p_dataAry = [NSMutableArray arrayWithObjects:@"runloop",@"runtime", nil];
+    p_dataAry = [NSMutableArray arrayWithObjects:@"runloop",@"runtime",@"Observer", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -99,6 +100,14 @@ static NSString *cellIdentifier = @"mainCell";
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;
+
+        case 2:{
+
+            ObserverViewController *controller = [[ObserverViewController alloc] initWithNibName:@"ObserverViewController" bundle:nil];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+
         default:
             break;
     }
