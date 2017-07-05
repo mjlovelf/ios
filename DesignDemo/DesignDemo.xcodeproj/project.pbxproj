@@ -43,6 +43,8 @@
 		2C3536261F0A2E7700110B45 /* runtime.md in Sources */ = {isa = PBXBuildFile; fileRef = 2C3536251F0A2E7700110B45 /* runtime.md */; };
 		2C35362B1F0B314C00110B45 /* ObserverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3536291F0B314C00110B45 /* ObserverViewController.m */; };
 		2C35362C1F0B314C00110B45 /* ObserverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35362A1F0B314C00110B45 /* ObserverViewController.xib */; };
+		2C3536311F0B6ECB00110B45 /* GCDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35362F1F0B6ECB00110B45 /* GCDMainViewController.m */; };
+		2C3536321F0B6ECB00110B45 /* GCDMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,9 @@
 		2C3536281F0B314C00110B45 /* ObserverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverViewController.h; sourceTree = "<group>"; };
 		2C3536291F0B314C00110B45 /* ObserverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverViewController.m; sourceTree = "<group>"; };
 		2C35362A1F0B314C00110B45 /* ObserverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObserverViewController.xib; sourceTree = "<group>"; };
+		2C35362E1F0B6ECB00110B45 /* GCDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDMainViewController.h; sourceTree = "<group>"; };
+		2C35362F1F0B6ECB00110B45 /* GCDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDMainViewController.m; sourceTree = "<group>"; };
+		2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDMainViewController.xib; sourceTree = "<group>"; };
 		2EFDD9C69ECA12D23FE81523 /* Pods-DesignDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.release.xcconfig"; sourceTree = "<group>"; };
 		49528D6841858C368CF4955C /* libPods-DesignDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390B7883CBB32EDF3BA354B /* Pods-DesignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +181,7 @@
 		2C0FFD351F00A00E00644A69 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C35362D1F0B6EB400110B45 /* gcd */,
 				2C3536271F0B312100110B45 /* observer */,
 				2C3536111F04FB6000110B45 /* runloop */,
 				2C3536101F04FB5500110B45 /* runtime */,
@@ -333,6 +339,16 @@
 			name = observer;
 			sourceTree = "<group>";
 		};
+		2C35362D1F0B6EB400110B45 /* gcd */ = {
+			isa = PBXGroup;
+			children = (
+				2C35362E1F0B6ECB00110B45 /* GCDMainViewController.h */,
+				2C35362F1F0B6ECB00110B45 /* GCDMainViewController.m */,
+				2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */,
+			);
+			name = gcd;
+			sourceTree = "<group>";
+		};
 		9D1A68FB78B007C48AB22FEE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +486,7 @@
 			files = (
 				2C28B51D1EEFB3D70083EDE0 /* LaunchScreen.storyboard in Resources */,
 				2C0FFD3B1F00A04B00644A69 /* RunLoopViewController.xib in Resources */,
+				2C3536321F0B6ECB00110B45 /* GCDMainViewController.xib in Resources */,
 				2C35362C1F0B314C00110B45 /* ObserverViewController.xib in Resources */,
 				2C28B51A1EEFB3D70083EDE0 /* Assets.xcassets in Resources */,
 				2C0FFD4A1F00D93F00644A69 /* PerfromMethodViewController.xib in Resources */,
@@ -570,6 +587,7 @@
 				2C0C289E1EF3DC2000CF8615 /* RunLoopStudyViewController.m in Sources */,
 				2C0FFD3A1F00A04B00644A69 /* RunLoopViewController.m in Sources */,
 				2C28B5181EEFB3D70083EDE0 /* DesignDemo.xcdatamodeld in Sources */,
+				2C3536311F0B6ECB00110B45 /* GCDMainViewController.m in Sources */,
 				2C28B5441EEFB4130083EDE0 /* ViewController.m in Sources */,
 				2C35361B1F04FD9700110B45 /* RuntimeViewController.m in Sources */,
 				2C28B50C1EEFB3D70083EDE0 /* main.m in Sources */,

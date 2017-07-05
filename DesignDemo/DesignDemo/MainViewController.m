@@ -10,6 +10,7 @@
 #import "RunLoopViewController.h"
 #import "RuntimeViewController.h"
 #import "ObserverViewController.h"
+#import "GCDMainViewController.h"
 
 static NSString *cellIdentifier = @"mainCell";
 
@@ -30,7 +31,7 @@ static NSString *cellIdentifier = @"mainCell";
     [Utils setNavBarBgUI:self.navigationController.navigationBar];
     self.title = @"study";
     [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-    p_dataAry = [NSMutableArray arrayWithObjects:@"runloop",@"runtime",@"Observer", nil];
+    p_dataAry = [NSMutableArray arrayWithObjects:@"runloop",@"runtime",@"Observer",@"GCD", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -107,7 +108,13 @@ static NSString *cellIdentifier = @"mainCell";
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;
+        case 3:{
 
+            GCDMainViewController *controller = [[GCDMainViewController alloc] initWithNibName:@"GCDMainViewController" bundle:nil];
+            [self.navigationController pushViewController:controller animated:YES];
+
+        }
+            break;
         default:
             break;
     }
