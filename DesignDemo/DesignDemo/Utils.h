@@ -104,12 +104,12 @@ static NSInteger PWD_MIN_INPUT_LENGTH = 7;
 /**
  *  获取银行账户用户信息
  *  nsdictionary 内包含的键值对分别为:
-     name		登陆名
-     contact	联系人
-     mobile		电话号码
-     email		邮箱地址
-     orgname	车老板APP	所属机构
-     idcard		身份证号码
+ name		登陆名
+ contact	联系人
+ mobile		电话号码
+ email		邮箱地址
+ orgname	车老板APP	所属机构
+ idcard		身份证号码
  */
 + (NSDictionary *)getBankUserInfo;
 
@@ -424,7 +424,7 @@ static NSInteger PWD_MIN_INPUT_LENGTH = 7;
 
 #pragma mark - ip
 /*
-    获取设备ip地址
+ 获取设备ip地址
  */
 + (NSString *)getIPAddress ;
 /**
@@ -520,4 +520,29 @@ static NSInteger PWD_MIN_INPUT_LENGTH = 7;
 + (NSString *)getCurrentAppVersionWithV;
 
 + (UIButton*)createButtonWith:(CustomButtonType)aType text:(NSString *)title img:(UIImage *)img;
+
+/**
+ 去掉数组中重复数据
+
+ @param array 有重复数据的数组
+ @return 无重复数据的数组
+ */
++ (NSArray *) getUnRepetitiveArray:(NSArray *)array;
+
+
+/**
+ 对view进行截图
+
+ @param view 传入view
+ @return 图片
+ */
++ (UIImage *)captureImgWithView:(UIView *)view;
+
+/**
+ 颜色转图片
+
+ @param color 颜色
+ @return 图片
+ */
++ (UIImage *)cl_imageWithColor:(UIColor *)color;
 @end

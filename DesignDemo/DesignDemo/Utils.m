@@ -294,6 +294,7 @@ static NSDictionary *kSeperationSpaceDict;
     NSDictionary * dict = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:[UIColor whiteColor],[UIFont boldSystemFontOfSize:20],nil]
                                                       forKeys:[NSArray arrayWithObjects:NSForegroundColorAttributeName,NSFontAttributeName, nil]];
     navBar.titleTextAttributes = dict;
+
 }
 
 
@@ -1101,5 +1102,34 @@ static NSDictionary *kSeperationSpaceDict;
         [aBtn setBackgroundColor:[UIColor clearColor]];
     }
     return aBtn;
+}
++ (NSArray *) getUnRepetitiveArray:(NSArray *)array{
+    
+    NSArray *newArr = [array valueForKeyPath:@"@distinctUnionOfObjects.self"];
+    
+    return newArr;
+}
+
++ (UIImage *)captureImgWithView:(UIView *)view{
+
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, YES, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return img;
+}
+
++ (UIImage *)cl_imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 @end

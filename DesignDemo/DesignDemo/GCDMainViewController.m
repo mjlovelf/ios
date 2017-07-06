@@ -5,6 +5,35 @@
 //  Created by mjbest on 17/7/4.
 //  Copyright © 2017年 majian. All rights reserved.
 //
+/*
+ Grand Central Dispatch支持以下dispatch source：
+
+ Timer dispatch source：定期产生通知
+
+ Signal dispatch source：UNIX信号到达时产生通知
+
+ Descriptor dispatch source：各种文件和socket操作的通知
+
+ 数据可读
+
+ 数据可写
+
+ 文件在文件系统中被删除、移动、重命名
+
+ 文件元数据信息改变
+
+ Process dispatch source：进程相关的事件通知
+
+ 当进程退出时
+
+ 当进程发起fork或exec等调用
+
+ 信号被递送到进程
+
+ Mach port dispatch source：Mach相关事件的通知
+
+ Custom dispatch source：你自己定义并自己触发
+ */
 
 #import "GCDMainViewController.h"
 static NSString *cellIdentifier = @"GCDMainCell";
@@ -25,7 +54,7 @@ static NSString *cellIdentifier = @"GCDMainCell";
     [Utils setNavBarBgUI:self.navigationController.navigationBar];
     self.title = @"GCD";
     [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-    p_dataAry = [NSMutableArray arrayWithObjects:@"getGlobalQueue", nil];
+    p_dataAry = [NSMutableArray arrayWithObjects:@"getGlobalQueue",@"sourcequeue", nil];
 
 }
 
@@ -91,7 +120,13 @@ static NSString *cellIdentifier = @"GCDMainCell";
 
         }
             break;
-            
+        case 1:
+        {
+            [self useDispatchSourceQueue];
+
+        }
+            break;
+
         default:
             break;
     }
@@ -125,12 +160,12 @@ static NSString *cellIdentifier = @"GCDMainCell";
 - (void)createSerializationAndConcurrentDispatch{
 
 
-   /**
+    /**
      创建串行队列
-    "com.majian.serialization" A string label to attach to the queue.
+     "com.majian.serialization" A string label to attach to the queue.
      NULL NULL的时候默认代表串行。
-    */
-   dispatch_queue_t serialQueue =  dispatch_queue_create("com.majian.serialization", NULL);
+     */
+    dispatch_queue_t serialQueue =  dispatch_queue_create("com.majian.serialization", NULL);
 
     /**
      创建并行队列
@@ -139,7 +174,7 @@ static NSString *cellIdentifier = @"GCDMainCell";
      */
     dispatch_queue_t concurrent = dispatch_queue_create("com.majian.concurrent", DISPATCH_QUEUE_CONCURRENT);
 
-//异步执行
+    //异步执行
     dispatch_async(serialQueue, ^{
 
     });
@@ -147,5 +182,58 @@ static NSString *cellIdentifier = @"GCDMainCell";
     dispatch_sync(serialQueue, ^{
 
     });
+}
+//当需要挂起队列时，使用dispatch_suspend方法；恢复队列时，使用dispatch_resume方法
+//NOTE：执行挂起操作不会对已经开始执行的任务起作用，它仅仅只会阻止将要进行但是还未开始的任务。
+
+
+- (void)useDispatchGroupWait{
+
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    // 添加队列到组中
+    dispatch_group_async(group, queue, ^{
+        // 一些异步操作
+    });
+    //如果在所有任务完成前超时了，该函数会返回一个非零值。
+    //你可以对此返回值做条件判断以确定是否超出等待周期；
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    // 不需要group后将做释放操作
+
+}
+
+
+/**
+ dispatch_group_notify。它以异步的方式工作，
+ 当 Dispatch Group中没有任何任务时，它就会执行其代码，那么 completionBlock便会运行
+ */
+- (void)useDispatchGroupNotify{
+
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    // 添加队列到组中
+    dispatch_group_async(group, queue, ^{
+        // 一些异步操作
+    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+//        if (completionBlock) {
+//            completionBlock(error);
+//        }
+    });
+}
+
+/**
+ 使用sourcequeue处理事件
+ */
+- (void)useDispatchSourceQueue{
+
+   dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+    //leeway是指精确程度
+    dispatch_source_set_timer(timer, dispatch_walltime(NULL, 0), 1.0*NSEC_PER_SEC, 0);
+    dispatch_source_set_event_handler(timer, ^{
+        //do something end
+        dispatch_source_cancel(timer);
+    });
+    dispatch_resume(timer);
 }
 @end
