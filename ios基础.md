@@ -12,16 +12,16 @@
          3，block需要注意防止循环引用
          
 2.代理实现发送通知：
--(void)didclickButton{
-    //1、执行必选代理回调
-    if([self.delegate respondsToSelector:@selector(getCarModel:)]){
-        [self.delegate getCarModel:self];
-    }
-    //2、执行可选代理回调
-    if([self.delegate respondsToSelector:@selector(getCarOtherModel:)]){
-        [self.delegate getCarOtherModel:self];
-    }
-}
+        -(void)didclickButton{
+            //1、执行必选代理回调
+            if([self.delegate respondsToSelector:@selector(getCarModel:)]){
+                [self.delegate getCarModel:self];
+            }
+            //2、执行可选代理回调
+            if([self.delegate respondsToSelector:@selector(getCarOtherModel:)]){
+                [self.delegate getCarOtherModel:self];
+            }
+        }
 
 3.代理中使用weak，strong，assign
 对于weak:指明该对象并不负责保持delegate这个对象，delegate这个对象的销毁由外部控制。
