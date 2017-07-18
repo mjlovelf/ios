@@ -35,16 +35,16 @@
 
 5.要子视图超出父试图部分上面的控件可以响应事件，我们只需要重写上述方法就ok了：
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    UIView *view = [super hitTest:point withEvent:event];
-    if (view == nil) {
-        for (UIView *subView in self.subviews) {
-            CGPoint tp = [subView convertPoint:point fromView:self];
-            if (CGRectContainsPoint(subView.bounds, tp)) {
-                view = subView;
+        - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+            UIView *view = [super hitTest:point withEvent:event];
+            if (view == nil) {
+                for (UIView *subView in self.subviews) {
+                    CGPoint tp = [subView convertPoint:point fromView:self];
+                    if (CGRectContainsPoint(subView.bounds, tp)) {
+                        view = subView;
+                    }
+                }
             }
+
+            return view;
         }
-    }
-    
-    return view;
-}
