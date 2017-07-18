@@ -25,11 +25,12 @@
         }
 
 3.代理中使用weak，strong，assign
-对于weak:指明该对象并不负责保持delegate这个对象，delegate这个对象的销毁由外部控制。
 
-对于strong：该对象强引用delegate，外界不能销毁delegate对象，会导致循环引用(Retain Cycles)
+        对于weak:指明该对象并不负责保持delegate这个对象，delegate这个对象的销毁由外部控制。
 
-对于assign：也有weak的功效。但是网上有assign是指针赋值，不对引用计数操作，使用之后如果没有置为nil，可能就会产生野指针；而weak一旦不进行使用后，永远不会使用了，就不会产生野指针
+        对于strong：该对象强引用delegate，外界不能销毁delegate对象，会导致循环引用(Retain Cycles)
+
+        对于assign：也有weak的功效。但是网上有assign是指针赋值，不对引用计数操作，使用之后如果没有置为nil，可能就会产生野指针；而weak一旦不进行使用后，永远不会使用了，就不会产生野指针
 
 4.关联属性可以使用kvo。关联属性其实就相当于分类增加一个属性那么如果是
 
@@ -48,3 +49,19 @@
 
             return view;
         }
+6.书写个dispatch_once:对于某个任务执行一次，且只执行一次。
+     dispatch_once函数有两个参数，第一个参数predicate用来保证执行一次，
+     第二个参数是要执行一次的任务block
+     dispatch_once被广泛使用在单例、缓存等代码中，用以保证在初始化时执行一次某任务。
+     dispatch_once在单线程程序中毫无意义，但在多线程程序中，其低负载、高可依赖性、接口简单等特性，赢得了广大消费者的一致五星好评。
+
+        + (instancetype)defaultInstance {
+            static AFImageDownloader *sharedInstance = nil;
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                sharedInstance = [[self alloc] init];
+            });
+            return sharedInstance;
+        }
+        
+ 
