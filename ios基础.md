@@ -12,6 +12,7 @@
          3，block需要注意防止循环引用
          
 2.代理实现发送通知：
+
         -(void)didclickButton{
             //1、执行必选代理回调
             if([self.delegate respondsToSelector:@selector(getCarModel:)]){
