@@ -57,3 +57,9 @@
                同步执行
 
                dispatch_sync(<#dispatch_queue_t queue#>, <#^(void)block#>)
+
+4.为了防止循环引用，我们都知道使用weak(self); 但是程序中偶尔会见到strong(self); 这种用法，请问：strong(self)的应用场景是什么？
+        
+        weakself是弱化的self，防止self被强引用。同理strong self就是强化的self，防止self被释放
+        eg:block回调中如果有self中方法，则需要使用weak，否则循环了，而为了保证block中代码执行完成，比如异步耗时动作
+        加上strong（可以理解为局部变量强引用所以不会有循环问题）则能保证代码的执行。比如dbmanager中performBlockAndWait也需要用到weak
