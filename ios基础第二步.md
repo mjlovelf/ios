@@ -89,4 +89,22 @@
 
         dispatch_async并发读   － 读可以并发
         dispatch_barrier写   － 写只能串行
-9.
+
+9.dispatch_group函数族的应用场景是什么？
+假如现在让你使用信号量（dispatch_semaphore）来模拟类似的功能，如何实现？
+
+        第一个问号：可以并行的操作，需要这些全部操作完成之后再进行其他操作，
+        比如我进入一个页面，必须拿到两个接口的数据（并发）之后才能刷UI
+        
+     dispatch_queue_t dispatchQueue = dispatch_queue_create("com.mj.test", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    
+    dispatch_group_async(dispatchGroup, dispatchQueue, ^(){
+        NSLog(@"第一个线程执行内容");
+    });
+    dispatch_group_async(dispatchGroup, dispatchQueue, ^(){
+        NSLog(@"第二个线程执行内容");
+    });
+    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
+        NSLog(@"这里执行页面跳转");
+    });
