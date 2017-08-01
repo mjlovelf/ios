@@ -56,6 +56,8 @@ static NSString *cellIdentifier = @"GCDMainCell";
     [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
     p_dataAry = [NSMutableArray arrayWithObjects:@"getGlobalQueue",@"sourcequeue",@"dispatchGroup",@"dispatchapply",@"dispatchBarrier", nil];
 
+    [self testDeadLock];
+
 }
 
 
@@ -171,6 +173,23 @@ static NSString *cellIdentifier = @"GCDMainCell";
 
 }
 
+- (void)testDeadLock{
+
+    dispatch_queue_t serialQueue =  dispatch_queue_create("com.majian.serialization", NULL);
+    dispatch_queue_t serialQueue2 =  dispatch_queue_create("com.majian.serialQueue2", NULL);
+    dispatch_sync(serialQueue, ^{
+        NSLog(@"start");
+        dispatch_semaphore_signal(semaphore);
+        dispatch_sync(serialQueue, ^{
+            NSLog(@"run serialQueue2");
+
+        });
+        NSLog(@"end serialQueue2");
+
+    });
+    NSLog(@"end");
+}
+
 - (void)createSerializationAndConcurrentDispatch{
 
 
@@ -272,17 +291,17 @@ static NSString *cellIdentifier = @"GCDMainCell";
         if (buffer)
         {
             ssize_t actual = read(fd, buffer, (estimated));
-           // Boolean done = MyProcessFileData(buffer, actual);  // Process the data.
+            // Boolean done = MyProcessFileData(buffer, actual);  // Process the data.
 
             // Release the buffer when done.
             free(buffer);
 
             // If there is no more data, cancel the source.
-           // if (done)
-                dispatch_source_cancel(readSource);
+            // if (done)
+            dispatch_source_cancel(readSource);
         }
     });
-    
+
     // Install the cancellation handler
     dispatch_source_set_cancel_handler(readSource, ^{close(fd);});
     dispatch_resume(readSource);
@@ -307,13 +326,13 @@ static NSString *cellIdentifier = @"GCDMainCell";
     }
 
     dispatch_source_set_event_handler(writeSource, ^{
-     //   size_t bufferSize = MyGetDataSize();
-      //  void* buffer = malloc(bufferSize);
+        //   size_t bufferSize = MyGetDataSize();
+        //  void* buffer = malloc(bufferSize);
 
-     //   size_t actual = MyGetData(buffer, bufferSize);
-      //  write(fd, buffer, actual);
+        //   size_t actual = MyGetData(buffer, bufferSize);
+        //  write(fd, buffer, actual);
 
-       // free(buffer);
+        // free(buffer);
 
         // Cancel and release the dispatch source when done.
         dispatch_source_cancel(writeSource);
@@ -346,7 +365,7 @@ static NSString *cellIdentifier = @"GCDMainCell";
         // Install the event handler to process the name change
         dispatch_source_set_event_handler(source, ^{
             const char*  oldFilename = (char*)dispatch_get_context(source);
-     //       MyUpdateFileName(oldFilename, fd);
+            //       MyUpdateFileName(oldFilename, fd);
         });
 
         // Install a cancellation handler to free the descriptor
@@ -381,7 +400,7 @@ void InstallSignalHandler()
     if (source)
     {
         dispatch_source_set_event_handler(source, ^{
-       //     MyProcessSIGHUP();
+            //     MyProcessSIGHUP();
         });
 
         // Start processing signals
@@ -430,22 +449,22 @@ void InstallSignalHandler()
  返回 dispatch_queue_t 队列对象 dispatch_object
  */
 - (void)dispatchGroup{
-dispatch_queue_t talentQueue = dispatch_queue_create("dispatch.queue.test", DISPATCH_QUEUE_CONCURRENT);
-//创建调度组
-dispatch_group_t talentGroup = dispatch_group_create();
-//创建任务
-for (int i = 1; i <= 5; i ++) {
-    dispatch_group_async(talentGroup, talentQueue, ^{
-        sleep(3);
-        NSString *string = [NSString stringWithFormat:@"任务%d",i];
-        NSLog(@"%@ 是否主线程:%@",string,[NSThread currentThread].isMainThread?@"YES":@"NO");
+    dispatch_queue_t talentQueue = dispatch_queue_create("dispatch.queue.test", DISPATCH_QUEUE_CONCURRENT);
+    //创建调度组
+    dispatch_group_t talentGroup = dispatch_group_create();
+    //创建任务
+    for (int i = 1; i <= 5; i ++) {
+        dispatch_group_async(talentGroup, talentQueue, ^{
+            sleep(3);
+            NSString *string = [NSString stringWithFormat:@"任务%d",i];
+            NSLog(@"%@ 是否主线程:%@",string,[NSThread currentThread].isMainThread?@"YES":@"NO");
+        });
+    }
+    //分组结果通知
+    dispatch_group_notify(talentGroup, talentQueue, ^{
+        NSLog(@"thread: %p 是否主线程?:%@ 任务全部执行完毕*********",[NSThread currentThread],[NSThread currentThread].isMainThread?@"YES":@"NO");
     });
-}
-//分组结果通知
-dispatch_group_notify(talentGroup, talentQueue, ^{
-    NSLog(@"thread: %p 是否主线程?:%@ 任务全部执行完毕*********",[NSThread currentThread],[NSThread currentThread].isMainThread?@"YES":@"NO");
-});
-NSLog(@"分组任务添加完毕 是否主线程:%@",[NSThread currentThread].isMainThread?@"YES":@"NO");
+    NSLog(@"分组任务添加完毕 是否主线程:%@",[NSThread currentThread].isMainThread?@"YES":@"NO");
 }
 
 - (void)dispatchApply{
@@ -493,7 +512,7 @@ NSLog(@"分组任务添加完毕 是否主线程:%@",[NSThread currentThread].is
         }
     }
     NSLog(@"任务添加完毕 是否主线程:%@",[NSThread currentThread].isMainThread?@"YES":@"NO");
-
-
+    
+    
 }
 @end
