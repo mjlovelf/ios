@@ -45,6 +45,7 @@
 		2C35362C1F0B314C00110B45 /* ObserverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C35362A1F0B314C00110B45 /* ObserverViewController.xib */; };
 		2C3536311F0B6ECB00110B45 /* GCDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35362F1F0B6ECB00110B45 /* GCDMainViewController.m */; };
 		2C3536321F0B6ECB00110B45 /* GCDMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */; };
+		2CA2F3611F32F76C006B642E /* MyScollview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2F3601F32F76C006B642E /* MyScollview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,8 @@
 		2C35362E1F0B6ECB00110B45 /* GCDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDMainViewController.h; sourceTree = "<group>"; };
 		2C35362F1F0B6ECB00110B45 /* GCDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDMainViewController.m; sourceTree = "<group>"; };
 		2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDMainViewController.xib; sourceTree = "<group>"; };
+		2CA2F35F1F32F76C006B642E /* MyScollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScollview.h; sourceTree = "<group>"; };
+		2CA2F3601F32F76C006B642E /* MyScollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScollview.m; sourceTree = "<group>"; };
 		2EFDD9C69ECA12D23FE81523 /* Pods-DesignDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.release.xcconfig"; sourceTree = "<group>"; };
 		49528D6841858C368CF4955C /* libPods-DesignDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390B7883CBB32EDF3BA354B /* Pods-DesignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +184,7 @@
 		2C0FFD351F00A00E00644A69 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				2CA2F3591F30795D006B642E /* UI */,
 				2C35362D1F0B6EB400110B45 /* gcd */,
 				2C3536271F0B312100110B45 /* observer */,
 				2C3536111F04FB6000110B45 /* runloop */,
@@ -347,6 +351,23 @@
 				2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */,
 			);
 			name = gcd;
+			sourceTree = "<group>";
+		};
+		2CA2F3591F30795D006B642E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2F35E1F32F76C006B642E /* view */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2CA2F35E1F32F76C006B642E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2CA2F35F1F32F76C006B642E /* MyScollview.h */,
+				2CA2F3601F32F76C006B642E /* MyScollview.m */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		9D1A68FB78B007C48AB22FEE /* Pods */ = {
@@ -576,6 +597,7 @@
 				2C3536241F06328700110B45 /* rootMethod.m in Sources */,
 				2C28B5481EEFC0930083EDE0 /* DataHelper.m in Sources */,
 				2C28B54E1EEFE1A40083EDE0 /* baseModel.m in Sources */,
+				2CA2F3611F32F76C006B642E /* MyScollview.m in Sources */,
 				2C0FFD491F00D93F00644A69 /* PerfromMethodViewController.m in Sources */,
 				2C0FFD451F00AEBE00644A69 /* Utils.m in Sources */,
 				2C28B5411EEFB3FE0083EDE0 /* AppDelegate.m in Sources */,

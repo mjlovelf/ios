@@ -179,7 +179,7 @@ static NSString *cellIdentifier = @"GCDMainCell";
     dispatch_queue_t serialQueue2 =  dispatch_queue_create("com.majian.serialQueue2", NULL);
     dispatch_sync(serialQueue, ^{
         NSLog(@"start");
-        dispatch_semaphore_signal(semaphore);
+        //error
         dispatch_sync(serialQueue, ^{
             NSLog(@"run serialQueue2");
 
