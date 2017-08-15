@@ -180,10 +180,10 @@ static NSString *cellIdentifier = @"GCDMainCell";
     dispatch_sync(serialQueue, ^{
         NSLog(@"start");
         //error
-        dispatch_sync(serialQueue, ^{
-            NSLog(@"run serialQueue2");
-
-        });
+//        dispatch_sync(serialQueue, ^{
+//            NSLog(@"run serialQueue2");
+//
+//        });
         NSLog(@"end serialQueue2");
 
     });

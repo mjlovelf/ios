@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/Animation/UIAnimation/AnimationPageRelatedController.m \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/DesignModelDemo-Prefix.pch \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/Utils.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/Global.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/Animation/UIAnimation/AnimationPageRelatedController.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/BasicViewController.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXMultiFormatWriter.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXWriter.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXBarcodeFormat.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXImage.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXLuminanceSource.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXCGImageLuminanceSource.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXBinaryBitmap.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXHybridBinarizer.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXGlobalHistogramBinarizer.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXBinarizer.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXBitArray.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXBitMatrix.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXDecodeHints.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXMultiFormatReader.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXReader.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXResult.h \
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXingObjCHeaders/ZXResultMetadataType.h

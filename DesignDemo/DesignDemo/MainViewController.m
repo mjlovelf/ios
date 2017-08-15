@@ -11,6 +11,8 @@
 #import "RuntimeViewController.h"
 #import "ObserverViewController.h"
 #import "GCDMainViewController.h"
+#import "AnimationPageRelatedController.h"
+#import "ZXingQRController.h"
 
 static NSString *cellIdentifier = @"mainCell";
 
@@ -31,7 +33,7 @@ static NSString *cellIdentifier = @"mainCell";
     [Utils setNavBarBgUI:self.navigationController.navigationBar];
     self.title = @"study";
     [_tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
-    p_dataAry = [NSMutableArray arrayWithObjects:@"runloop",@"runtime",@"Observer",@"GCD", nil];
+    p_dataAry = [NSMutableArray arrayWithObjects:@"runloop",@"runtime",@"Observer",@"GCD",@"Animation",@"Zxing", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,6 +115,18 @@ static NSString *cellIdentifier = @"mainCell";
             GCDMainViewController *controller = [[GCDMainViewController alloc] initWithNibName:@"GCDMainViewController" bundle:nil];
             [self.navigationController pushViewController:controller animated:YES];
 
+        }
+            break;
+        case 4:{
+            AnimationPageRelatedController *controller = [[AnimationPageRelatedController alloc] initWithNibName:@"AnimationPageRelatedController" bundle:nil];
+            [self.navigationController pushViewController:controller animated:YES];
+
+
+        }
+            break;
+        case 5:{
+            ZXingQRController *controller = [[ZXingQRController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
         }
             break;
         default:
