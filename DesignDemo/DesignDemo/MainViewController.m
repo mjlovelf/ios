@@ -12,7 +12,7 @@
 #import "ObserverViewController.h"
 #import "GCDMainViewController.h"
 #import "AnimationPageRelatedController.h"
-#import "ZXingQRController.h"
+#import "QrZXingController.h"
 
 static NSString *cellIdentifier = @"mainCell";
 
@@ -125,7 +125,7 @@ static NSString *cellIdentifier = @"mainCell";
         }
             break;
         case 5:{
-            ZXingQRController *controller = [[ZXingQRController alloc] init];
+            QrZXingController *controller = [[QrZXingController alloc] init];
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;

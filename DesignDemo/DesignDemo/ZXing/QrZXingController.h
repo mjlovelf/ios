@@ -8,6 +8,6 @@
 
 #import "BasicViewController.h"
 
-@interface ZXingQRController : BasicViewController
+@interface QrZXingController : BasicViewController
 
 @end

@@ -41,7 +41,6 @@
 		2C17A9361F3C432C007719D3 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C17A9351F3C432C007719D3 /* CoreVideo.framework */; };
 		2C17A9381F3C4337007719D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C17A9371F3C4337007719D3 /* CoreGraphics.framework */; };
 		2C17A93A1F3C4340007719D3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C17A9391F3C4340007719D3 /* AVFoundation.framework */; };
-		2C17A9451F414F36007719D3 /* ZXingQRController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C17A9441F414F36007719D3 /* ZXingQRController.m */; };
 		2C28B50C1EEFB3D70083EDE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28B50B1EEFB3D70083EDE0 /* main.m */; };
 		2C28B5151EEFB3D70083EDE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C28B5131EEFB3D70083EDE0 /* Main.storyboard */; };
 		2C28B5181EEFB3D70083EDE0 /* DesignDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C28B5161EEFB3D70083EDE0 /* DesignDemo.xcdatamodeld */; };
@@ -56,6 +55,13 @@
 		2C28B54E1EEFE1A40083EDE0 /* baseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28B54D1EEFE1A40083EDE0 /* baseModel.m */; };
 		2C28B5511EEFE4230083EDE0 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28B5501EEFE4230083EDE0 /* UserInfo.m */; };
 		2C28B5541EEFE4C70083EDE0 /* UserAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C28B5531EEFE4C70083EDE0 /* UserAction.m */; };
+		2C3535BD1F429B9500D4DDB9 /* QrZxingCodeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535B41F429B9500D4DDB9 /* QrZxingCodeFactory.m */; };
+		2C3535BE1F429B9500D4DDB9 /* QrCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535B61F429B9500D4DDB9 /* QrCodeManager.m */; };
+		2C3535BF1F429B9500D4DDB9 /* QrZxingCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535BA1F429B9500D4DDB9 /* QrZxingCodeView.m */; };
+		2C3535C01F429B9500D4DDB9 /* QrZXingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535BC1F429B9500D4DDB9 /* QrZXingController.m */; };
+		2C3535CA1F429D1400D4DDB9 /* UIDevice+IdentifierAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535C71F429D1400D4DDB9 /* UIDevice+IdentifierAddition.m */; };
+		2C3535CF1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535CC1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.m */; };
+		2C3535D01F429DD100D4DDB9 /* UIDevice+MJDeviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535CE1F429DD100D4DDB9 /* UIDevice+MJDeviceName.m */; };
 		2C3535F81F0238EF00110B45 /* PortMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535F61F0238EF00110B45 /* PortMethodViewController.m */; };
 		2C3535F91F0238EF00110B45 /* PortMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3535F71F0238EF00110B45 /* PortMethodViewController.xib */; };
 		2C3535FE1F023F8B00110B45 /* MyWorkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3535FD1F023F8B00110B45 /* MyWorkerClass.m */; };
@@ -290,8 +296,6 @@
 		2C17A9351F3C432C007719D3 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		2C17A9371F3C4337007719D3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2C17A9391F3C4340007719D3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		2C17A9431F414F36007719D3 /* ZXingQRController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingQRController.h; sourceTree = "<group>"; };
-		2C17A9441F414F36007719D3 /* ZXingQRController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingQRController.m; sourceTree = "<group>"; };
 		2C28B5071EEFB3D70083EDE0 /* DesignDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C28B50B1EEFB3D70083EDE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C28B50D1EEFB3D70083EDE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -320,6 +324,22 @@
 		2C28B5501EEFE4230083EDE0 /* UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
 		2C28B5521EEFE4C70083EDE0 /* UserAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAction.h; sourceTree = "<group>"; };
 		2C28B5531EEFE4C70083EDE0 /* UserAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAction.m; sourceTree = "<group>"; };
+		2C3535B21F429B9500D4DDB9 /* QrCodeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrCodeFactory.h; sourceTree = "<group>"; };
+		2C3535B31F429B9500D4DDB9 /* QrZxingCodeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrZxingCodeFactory.h; sourceTree = "<group>"; };
+		2C3535B41F429B9500D4DDB9 /* QrZxingCodeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrZxingCodeFactory.m; sourceTree = "<group>"; };
+		2C3535B51F429B9500D4DDB9 /* QrCodeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrCodeManager.h; sourceTree = "<group>"; };
+		2C3535B61F429B9500D4DDB9 /* QrCodeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrCodeManager.m; sourceTree = "<group>"; };
+		2C3535B81F429B9500D4DDB9 /* QrCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrCodeView.h; sourceTree = "<group>"; };
+		2C3535B91F429B9500D4DDB9 /* QrZxingCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrZxingCodeView.h; sourceTree = "<group>"; };
+		2C3535BA1F429B9500D4DDB9 /* QrZxingCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrZxingCodeView.m; sourceTree = "<group>"; };
+		2C3535BB1F429B9500D4DDB9 /* QrZXingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QrZXingController.h; sourceTree = "<group>"; };
+		2C3535BC1F429B9500D4DDB9 /* QrZXingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QrZXingController.m; sourceTree = "<group>"; };
+		2C3535C61F429D1400D4DDB9 /* UIDevice+IdentifierAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IdentifierAddition.h"; sourceTree = "<group>"; };
+		2C3535C71F429D1400D4DDB9 /* UIDevice+IdentifierAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IdentifierAddition.m"; sourceTree = "<group>"; };
+		2C3535CB1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MJAuthorizationStatus.h"; sourceTree = "<group>"; };
+		2C3535CC1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MJAuthorizationStatus.m"; sourceTree = "<group>"; };
+		2C3535CD1F429DD100D4DDB9 /* UIDevice+MJDeviceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+MJDeviceName.h"; sourceTree = "<group>"; };
+		2C3535CE1F429DD100D4DDB9 /* UIDevice+MJDeviceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+MJDeviceName.m"; sourceTree = "<group>"; };
 		2C3535F51F0238EF00110B45 /* PortMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortMethodViewController.h; sourceTree = "<group>"; };
 		2C3535F61F0238EF00110B45 /* PortMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortMethodViewController.m; sourceTree = "<group>"; };
 		2C3535F71F0238EF00110B45 /* PortMethodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PortMethodViewController.xib; sourceTree = "<group>"; };
@@ -422,6 +442,7 @@
 		2C0FFD3F1F00AE1400644A69 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				2C3535C11F429D1400D4DDB9 /* UIDevice */,
 				2C0FFD431F00AEBE00644A69 /* Utils.h */,
 				2C0FFD441F00AEBE00644A69 /* Utils.m */,
 				2C3535FF1F03593000110B45 /* Global.h */,
@@ -630,8 +651,12 @@
 		2C17A93B1F3C4DB1007719D3 /* ZXing */ = {
 			isa = PBXGroup;
 			children = (
-				2C17A9431F414F36007719D3 /* ZXingQRController.h */,
-				2C17A9441F414F36007719D3 /* ZXingQRController.m */,
+				2C3535B11F429B9500D4DDB9 /* BarcodeFactory */,
+				2C3535B51F429B9500D4DDB9 /* QrCodeManager.h */,
+				2C3535B61F429B9500D4DDB9 /* QrCodeManager.m */,
+				2C3535B71F429B9500D4DDB9 /* QrCodeView */,
+				2C3535BB1F429B9500D4DDB9 /* QrZXingController.h */,
+				2C3535BC1F429B9500D4DDB9 /* QrZXingController.m */,
 			);
 			path = ZXing;
 			sourceTree = "<group>";
@@ -715,6 +740,39 @@
 				2C28B5341EEFB3D70083EDE0 /* Info.plist */,
 			);
 			path = DesignDemoUITests;
+			sourceTree = "<group>";
+		};
+		2C3535B11F429B9500D4DDB9 /* BarcodeFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2C3535B21F429B9500D4DDB9 /* QrCodeFactory.h */,
+				2C3535B31F429B9500D4DDB9 /* QrZxingCodeFactory.h */,
+				2C3535B41F429B9500D4DDB9 /* QrZxingCodeFactory.m */,
+			);
+			path = BarcodeFactory;
+			sourceTree = "<group>";
+		};
+		2C3535B71F429B9500D4DDB9 /* QrCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				2C3535B81F429B9500D4DDB9 /* QrCodeView.h */,
+				2C3535B91F429B9500D4DDB9 /* QrZxingCodeView.h */,
+				2C3535BA1F429B9500D4DDB9 /* QrZxingCodeView.m */,
+			);
+			path = QrCodeView;
+			sourceTree = "<group>";
+		};
+		2C3535C11F429D1400D4DDB9 /* UIDevice */ = {
+			isa = PBXGroup;
+			children = (
+				2C3535CB1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.h */,
+				2C3535CC1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.m */,
+				2C3535CD1F429DD100D4DDB9 /* UIDevice+MJDeviceName.h */,
+				2C3535CE1F429DD100D4DDB9 /* UIDevice+MJDeviceName.m */,
+				2C3535C61F429D1400D4DDB9 /* UIDevice+IdentifierAddition.h */,
+				2C3535C71F429D1400D4DDB9 /* UIDevice+IdentifierAddition.m */,
+			);
+			path = UIDevice;
 			sourceTree = "<group>";
 		};
 		2C3535FB1F023E7500110B45 /* message */ = {
@@ -1046,8 +1104,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3535CF1F429DD100D4DDB9 /* UIDevice+MJAuthorizationStatus.m in Sources */,
+				2C3535CA1F429D1400D4DDB9 /* UIDevice+IdentifierAddition.m in Sources */,
 				2C3536171F04FD5200110B45 /* MiddleMethod+swizzlingMethod.m in Sources */,
 				2C3535FE1F023F8B00110B45 /* MyWorkerClass.m in Sources */,
+				2C3535BE1F429B9500D4DDB9 /* QrCodeManager.m in Sources */,
 				2C35362B1F0B314C00110B45 /* ObserverViewController.m in Sources */,
 				2C3536141F04FCB200110B45 /* MiddleMethod.m in Sources */,
 				2C3536201F04FE6000110B45 /* MainViewController.m in Sources */,
@@ -1055,21 +1116,24 @@
 				2C3536241F06328700110B45 /* rootMethod.m in Sources */,
 				2C28B5481EEFC0930083EDE0 /* DataHelper.m in Sources */,
 				2C28B54E1EEFE1A40083EDE0 /* baseModel.m in Sources */,
+				2C3535BD1F429B9500D4DDB9 /* QrZxingCodeFactory.m in Sources */,
 				2CA2F3611F32F76C006B642E /* MyScollview.m in Sources */,
 				2C17A7B31F380D65007719D3 /* AnimationPageRelatedController.m in Sources */,
 				2C0FFD491F00D93F00644A69 /* PerfromMethodViewController.m in Sources */,
 				2C0FFD451F00AEBE00644A69 /* Utils.m in Sources */,
 				2C28B5411EEFB3FE0083EDE0 /* AppDelegate.m in Sources */,
 				2C28B5541EEFE4C70083EDE0 /* UserAction.m in Sources */,
+				2C3535D01F429DD100D4DDB9 /* UIDevice+MJDeviceName.m in Sources */,
 				2C0FFD3E1F00ACC200644A69 /* BasicViewController.m in Sources */,
 				2C3535F81F0238EF00110B45 /* PortMethodViewController.m in Sources */,
-				2C17A9451F414F36007719D3 /* ZXingQRController.m in Sources */,
 				2C28B54B1EEFE03B0083EDE0 /* simpleFactory.m in Sources */,
 				2C0C289E1EF3DC2000CF8615 /* RunLoopStudyViewController.m in Sources */,
 				2C0FFD3A1F00A04B00644A69 /* RunLoopViewController.m in Sources */,
 				2C28B5181EEFB3D70083EDE0 /* DesignDemo.xcdatamodeld in Sources */,
 				2C3536311F0B6ECB00110B45 /* GCDMainViewController.m in Sources */,
 				2C28B5441EEFB4130083EDE0 /* ViewController.m in Sources */,
+				2C3535C01F429B9500D4DDB9 /* QrZXingController.m in Sources */,
+				2C3535BF1F429B9500D4DDB9 /* QrZxingCodeView.m in Sources */,
 				2C35361B1F04FD9700110B45 /* RuntimeViewController.m in Sources */,
 				2C28B50C1EEFB3D70083EDE0 /* main.m in Sources */,
 			);
