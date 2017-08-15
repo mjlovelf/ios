@@ -12,7 +12,7 @@
 #import "ObserverViewController.h"
 #import "GCDMainViewController.h"
 #import "AnimationPageRelatedController.h"
-#import "QrZXingController.h"
+#import "QrCodeManager.h"
 
 static NSString *cellIdentifier = @"mainCell";
 
@@ -125,8 +125,21 @@ static NSString *cellIdentifier = @"mainCell";
         }
             break;
         case 5:{
-            QrZXingController *controller = [[QrZXingController alloc] init];
-            [self.navigationController pushViewController:controller animated:YES];
+            QrCodeManager *codeManager = [QrCodeManager sharedInstance];
+            WEAK_SELF_OBJ(self);
+            [codeManager openBarCodeViewController:self.navigationController openStyle:OpenBarCodeViewControllerStyle_Push sucess:^(NSString *barCode, NSInteger status) {
+
+                [weakSelf.navigationController popToViewController:self animated:YES];
+
+            } failure:^(NSString *errStr, NSInteger status, BOOL isPopViewController) {
+
+                if (isPopViewController) {
+                    [weakSelf.navigationController popToViewController:self animated:YES];
+                }
+                
+            } cancel:^(NSString *cancelStr, NSInteger status) {
+                //暂时没用
+            }];
         }
             break;
         default:
