@@ -50,47 +50,8 @@ static  NSString * kBbeginAnimationID = @"beginAnimationID";
  */
 - (IBAction)AnimationButtonClick:(id)sender {
 
-    //[self  AnimationWithUIView];
-    NSString *data = @"http://www.jianshu.com/users/b8b48d8bdb6b/latest_articles";
-    if (data == 0)
-        return;
-    ZXMultiFormatWriter *writer = [[ZXMultiFormatWriter alloc] init];
-    ZXBitMatrix *result = [writer encode:data
-                                  format:kBarcodeFormatQRCode
-                                   width:self.imageView.frame.size.width
-                                  height:self.imageView.frame.size.width error:nil];
-    if (result) {
-        ZXImage *image = [ZXImage imageWithMatrix:result];
-        _imageView.image = [UIImage imageWithCGImage:image.cgimage];
-    } else {
-        _imageView.image = nil;
-    }
-    CGImageRef imageToDecode;  // Given a CGImage in which we are looking for barcodes
+    [self  AnimationWithUIView];
 
-    ZXLuminanceSource *source = [[ZXCGImageLuminanceSource alloc] initWithCGImage: _imageView.image.CGImage];
-    ZXBinaryBitmap *bitmap = [ZXBinaryBitmap binaryBitmapWithBinarizer:[ZXHybridBinarizer binarizerWithSource:source]];
-
-    NSError *error = nil;
-
-    // There are a number of hints we can give to the reader, including
-    // possible formats, allowed lengths, and the string encoding.
-    ZXDecodeHints *hints = [ZXDecodeHints hints];
-
-    ZXMultiFormatReader *reader = [ZXMultiFormatReader reader];
-    ZXResult *kresult = [reader decode:bitmap
-                                 hints:hints
-                                 error:&error];
-    if (kresult) {
-        // The coded result as a string. The raw data can be accessed with
-        // result.rawBytes and result.length.
-        NSString *contents = kresult.text;
-
-        // The barcode format, such as a QR code or UPC-A
-        ZXBarcodeFormat format = kresult.barcodeFormat;
-    } else {
-        // Use error to determine why we didn't get a result, such as a barcode
-        // not being found, an invalid checksum, or a format inconsistency.
-    }
 }
 
 /**
