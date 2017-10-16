@@ -31,6 +31,7 @@ static NSString *cellIdentifier = @"testCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [Utils setNavBarBgUI:self.navigationController.navigationBar];
     self.title = @"RunLoop中观察者";
     // Do any additional setup after loading the view from its nib.

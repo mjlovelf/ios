@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="oclint-0.12"><file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="1" endcolumn="154" beginline="156" endline="156" priority="5" rule="long line" ruleset="size" >
+Line with 154 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="1" endcolumn="181" beginline="157" endline="157" priority="5" rule="long line" ruleset="size" >
+Line with 181 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="1" endcolumn="188" beginline="158" endline="158" priority="5" rule="long line" ruleset="size" >
+Line with 188 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="1" endcolumn="186" beginline="168" endline="168" priority="5" rule="long line" ruleset="size" >
+Line with 186 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="1" endcolumn="232" beginline="265" endline="265" priority="5" rule="long line" ruleset="size" >
+Line with 232 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="1" endcolumn="159" beginline="465" endline="465" priority="5" rule="long line" ruleset="size" >
+Line with 159 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="57" endline="57" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="37" beginline="99" endline="99" priority="5" rule="short variable name" ruleset="naming" >
+Length of variable name `vv` is 2, which is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="37" beginline="275" endline="275" priority="5" rule="short variable name" ruleset="naming" >
+Length of variable name `fd` is 2, which is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="58" beginline="313" endline="314" priority="5" rule="short variable name" ruleset="naming" >
+Length of variable name `fd` is 2, which is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="38" beginline="350" endline="350" priority="5" rule="short variable name" ruleset="naming" >
+Length of variable name `fd` is 2, which is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="21" endcolumn="41" beginline="493" endline="493" priority="5" rule="short variable name" ruleset="naming" >
+Length of variable name `p` is 1, which is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="91" beginline="179" endline="179" priority="5" rule="unused local variable" ruleset="unused" >
+The local variable 'serialQueue2' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="5" endcolumn="107" beginline="208" endline="208" priority="5" rule="unused local variable" ruleset="unused" >
+The local variable 'concurrent' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="13" endcolumn="58" beginline="293" endline="293" priority="5" rule="unused local variable" ruleset="unused" >
+The local variable 'actual' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="13" endcolumn="74" beginline="367" endline="367" priority="5" rule="unused local variable" ruleset="unused" >
+The local variable 'oldFilename' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="43" endcolumn="57" beginline="78" endline="78" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="25" endcolumn="39" beginline="83" endline="83" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="72" endcolumn="82" beginline="83" endline="83" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="23" endcolumn="37" beginline="87" endline="87" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="73" endcolumn="83" beginline="87" endline="87" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="23" endcolumn="37" beginline="90" endline="90" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="73" endcolumn="83" beginline="90" endline="90" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="23" endcolumn="37" beginline="94" endline="94" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="80" endcolumn="94" beginline="94" endline="94" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'indexPath' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="25" endcolumn="39" beginline="98" endline="98" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="73" endcolumn="83" beginline="98" endline="98" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.m">
+<violation begincolumn="20" endcolumn="34" beginline="117" endline="117" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="1" endcolumn="153" beginline="66" endline="66" priority="5" rule="long line" ruleset="size" >
+Line with 153 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="40" endline="40" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="60" endline="60" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="66" endline="66" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="81" endline="81" priority="3" rule="ivar assignment outside accessors or init" ruleset="convention" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="5" endcolumn="37" beginline="150" endline="150" priority="5" rule="short variable name" ruleset="naming" >
+Length of variable name `vv` is 2, which is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="43" endcolumn="57" beginline="129" endline="129" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="25" endcolumn="39" beginline="134" endline="134" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="72" endcolumn="82" beginline="134" endline="134" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="23" endcolumn="37" beginline="138" endline="138" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="73" endcolumn="83" beginline="138" endline="138" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="23" endcolumn="37" beginline="141" endline="141" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="73" endcolumn="83" beginline="141" endline="141" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="23" endcolumn="37" beginline="145" endline="145" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="80" endcolumn="94" beginline="145" endline="145" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'indexPath' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="25" endcolumn="39" beginline="149" endline="149" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="73" endcolumn="83" beginline="149" endline="149" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="20" endcolumn="34" beginline="168" endline="168" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/RunLoopStudyViewController.m">
+<violation begincolumn="69" endcolumn="83" beginline="168" endline="168" priority="5" rule="unused method parameter" ruleset="unused" >
+The parameter 'indexPath' is unused.
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXing/QrCodeView/QrZxingCodeView.m">
+<violation begincolumn="5" endcolumn="5" beginline="267" endline="274" priority="3" rule="empty if statement" ruleset="empty" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXing/QrCodeView/QrZxingCodeView.m">
+<violation begincolumn="40" endcolumn="5" beginline="282" endline="290" priority="3" rule="empty if statement" ruleset="empty" >
+
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXing/QrCodeView/QrZxingCodeView.m">
+<violation begincolumn="1" endcolumn="157" beginline="429" endline="429" priority="5" rule="long line" ruleset="size" >
+Line with 157 characters exceeds limit of 150
+</violation>
+</file>
+
+<file name="/Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXing/QrCodeView/QrZxingCodeView.m">
+<violation begincolumn="5" endcolumn="5" beginline="386" endline="405" priority="5" rule="prefer early exits and continue" ruleset="convention" >
+Use early exit/continue to simplify code and reduce indentation
+</violation>
+</file>
+
+</pmd>

@@ -77,6 +77,7 @@
 		2C3536311F0B6ECB00110B45 /* GCDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C35362F1F0B6ECB00110B45 /* GCDMainViewController.m */; };
 		2C3536321F0B6ECB00110B45 /* GCDMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */; };
 		2CA2F3611F32F76C006B642E /* MyScollview.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA2F3601F32F76C006B642E /* MyScollview.m */; };
+		2CC8C7E71F74B546005F0196 /* EmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8C7E61F74B546005F0196 /* EmptyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +367,8 @@
 		2C3536301F0B6ECB00110B45 /* GCDMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GCDMainViewController.xib; sourceTree = "<group>"; };
 		2CA2F35F1F32F76C006B642E /* MyScollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScollview.h; sourceTree = "<group>"; };
 		2CA2F3601F32F76C006B642E /* MyScollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScollview.m; sourceTree = "<group>"; };
+		2CC8C7E51F74B546005F0196 /* EmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyView.h; sourceTree = "<group>"; };
+		2CC8C7E61F74B546005F0196 /* EmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyView.m; sourceTree = "<group>"; };
 		2EFDD9C69ECA12D23FE81523 /* Pods-DesignDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.release.xcconfig"; sourceTree = "<group>"; };
 		49528D6841858C368CF4955C /* libPods-DesignDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DesignDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B390B7883CBB32EDF3BA354B /* Pods-DesignDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignDemo/Pods-DesignDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -854,6 +857,8 @@
 			children = (
 				2CA2F35F1F32F76C006B642E /* MyScollview.h */,
 				2CA2F3601F32F76C006B642E /* MyScollview.m */,
+				2CC8C7E51F74B546005F0196 /* EmptyView.h */,
+				2CC8C7E61F74B546005F0196 /* EmptyView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -953,24 +958,21 @@
 				TargetAttributes = {
 					2C17A7C61F3B150F007719D3 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = LT945GEG63;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					2C28B5061EEFB3D70083EDE0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = LT945GEG63;
+						DevelopmentTeam = 89G2FJWHP7;
 						ProvisioningStyle = Automatic;
 					};
 					2C28B5221EEFB3D70083EDE0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = LT945GEG63;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 2C28B5061EEFB3D70083EDE0;
 					};
 					2C28B52D1EEFB3D70083EDE0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = LT945GEG63;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 2C28B5061EEFB3D70083EDE0;
 					};
 				};
@@ -1065,7 +1067,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd ${SRCROOT}\nxcodebuild clean\nxcodebuild | xcpretty -r json-compilation-database\ncp ./build/reports/compilation_db.json ./compile_commands.json\noclint-json-compilation-database -v \\\n-e Pods \\\noclint_args -- -report-type xcode \\\n-disable-rule ObjCAssignIvarOutsideAccessors \\\n-rc=MINIMUM_CASES_IN_SWITCH=3 \\\n-rc=LONG_VARIABLE_NAME=20 \\\n-disable-rule ShortVariableName \\\n-rc=CYCLOMATIC_COMPLEXITY=10 \\\n-rc=LONG_CLASS=700 \\\n-rc=LONG_LINE=200 \\\n-rc=LONG_METHOD=80 \\\n-rc=NCSS_METHOD=40 \\\n-rc=NESTED_BLOCK_DEPTH=5 \\\n-rc=TOO_MANY_FIELDS=20 \\\n-rc=TOO_MANY_METHODS=30 \\\n-rc=TOO_MANY_PARAMETERS=6";
+			shellScript = "source ~/.bash_profile\ncd ${SRCROOT}\nxcodebuild clean\nxcodebuild | xcpretty -r json-compilation-database -o compile_commands.json\noclint-json-compilation-database \\\n-e Pods \\\n-e SSZipArchive \\\n-- \\\n-stats \\\n-verbose \\\n-report-type xcode \\\n-max-priority-1=9999 -max-priority-2=9999 -max-priority-3=9999 \\\n-rc LONG_LINE=200 \\\n-rc LONG_METHOD=100 \\\n-rc=MINIMUM_CASES_IN_SWITCH=2 \\\n-rc=LONG_VARIABLE_NAME=20 \\\n-rc=CYCLOMATIC_COMPLEXITY=10 \\\n-rc=LONG_CLASS=700 \\\n-rc=NCSS_METHOD=40 \\\n-rc=NESTED_BLOCK_DEPTH=5 \\\n-rc=TOO_MANY_FIELDS=20 \\\n-rc=TOO_MANY_METHODS=30 \\\n-rc=TOO_MANY_PARAMETERS=6 \\\n-disable-rule ShortVariableName \\\n-disable-rule=BrokenOddnessCheck \\\n-disable-rule=VerifyProhibitedCall \\\n-disable-rule=VerifyProtectedMethod \\\n-disable-rule=SubclassMustImplement \\\n-disable-rule=BaseClassDestructorShouldBeVirtualOrProtected \\\n-disable-rule=DestructorOfVirtualClass \\\n-disable-rule=ParameterReassignment \\\n-disable-rule=AvoidDefaultArgumentsOnVirtualMethods \\\n-disable-rule=AvoidPrivateStaticMembers \\\n-disable-rule=TooManyParameters \\\n-disable-rule=UnusedMethodParameter \\\n-disable-rule=UseObjectSubscripting \\\n-disable-rule=AssignIvarOutsideAccessors";
 		};
 		30A1A5CDB4D681176D4857AB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1118,6 +1120,7 @@
 				2C28B54E1EEFE1A40083EDE0 /* baseModel.m in Sources */,
 				2C3535BD1F429B9500D4DDB9 /* QrZxingCodeFactory.m in Sources */,
 				2CA2F3611F32F76C006B642E /* MyScollview.m in Sources */,
+				2CC8C7E71F74B546005F0196 /* EmptyView.m in Sources */,
 				2C17A7B31F380D65007719D3 /* AnimationPageRelatedController.m in Sources */,
 				2C0FFD491F00D93F00644A69 /* PerfromMethodViewController.m in Sources */,
 				2C0FFD451F00AEBE00644A69 /* Utils.m in Sources */,
@@ -1193,7 +1196,6 @@
 		2C17A7C81F3B150F007719D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LT945GEG63;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1201,7 +1203,6 @@
 		2C17A7C91F3B150F007719D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LT945GEG63;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1301,7 +1302,8 @@
 			baseConfigurationReference = B390B7883CBB32EDF3BA354B /* Pods-DesignDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LT945GEG63;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 89G2FJWHP7;
 				GCC_PREFIX_HEADER = "DesignDemo/DesignModelDemo-Prefix.pch";
 				INFOPLIST_FILE = DesignDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1311,6 +1313,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.DesignDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1319,7 +1322,8 @@
 			baseConfigurationReference = 2EFDD9C69ECA12D23FE81523 /* Pods-DesignDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = LT945GEG63;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 89G2FJWHP7;
 				GCC_PREFIX_HEADER = "DesignDemo/DesignModelDemo-Prefix.pch";
 				INFOPLIST_FILE = DesignDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1329,6 +1333,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = test.DesignDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -1336,7 +1341,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = LT945GEG63;
 				INFOPLIST_FILE = DesignDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.DesignDemoTests;
@@ -1349,7 +1353,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = LT945GEG63;
 				INFOPLIST_FILE = DesignDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.DesignDemoTests;
@@ -1361,7 +1364,6 @@
 		2C28B53E1EEFB3D70083EDE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LT945GEG63;
 				INFOPLIST_FILE = DesignDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.DesignDemoUITests;
@@ -1373,7 +1375,6 @@
 		2C28B53F1EEFB3D70083EDE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = LT945GEG63;
 				INFOPLIST_FILE = DesignDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = test.DesignDemoUITests;

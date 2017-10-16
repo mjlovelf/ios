@@ -1,0 +1,6 @@
+projectKey=DesignDemo
+serverUrl=http://localhost:9002
+serverVersion=6.5.0.27846
+dashboardUrl=http://localhost:9002/dashboard/index/DesignDemo
+ceTaskId=AV3z_MqQHG-rRsi47B3s
+ceTaskUrl=http://localhost:9002/api/ce/task?id=AV3z_MqQHG-rRsi47B3s

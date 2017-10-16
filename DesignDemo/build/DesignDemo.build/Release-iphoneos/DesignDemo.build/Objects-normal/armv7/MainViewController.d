@@ -10,4 +10,4 @@ dependencies: \
   /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ObserverViewController.h \
   /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/GCDMainViewController.h \
   /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/Animation/UIAnimation/AnimationPageRelatedController.h \
-  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXing/ZXingQRController.h
+  /Users/mjbest/study/ios/demo/ios/DesignDemo/DesignDemo/ZXing/QrCodeManager.h

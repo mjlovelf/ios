@@ -52,6 +52,12 @@
     free(iVarList);//记得释放内存
     return self;
 }
++(void)startTest{
+
+    NSLog(@"startTest.......");
+
+}
+
 
 
 - (void)writeBaseSome{
